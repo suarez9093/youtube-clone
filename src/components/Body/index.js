@@ -7,7 +7,15 @@ function Body() {
   console.log('videos ', videos);
   return (
     <main className='body'>
-      <VideoSnippet />
+      <VideoSnippet banner={videos} />
+      {videos?.map((video, i) => (
+        <VideoSnippet
+          title={video.snippet.title}
+          key={i}
+          videoId={video.id.videoId}
+          banner={video.snippet.thumbnails.default.url}
+        />
+      ))}
     </main>
   );
 }

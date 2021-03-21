@@ -9,10 +9,11 @@ function ContextProvider({ children }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
+    let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=1&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
 
     let urlResponse = await fetch(url);
     let data = await urlResponse.json();
+    console.log('data ', data);
     setVideos(data.items);
     setQuery('');
   }
