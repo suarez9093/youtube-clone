@@ -7,6 +7,9 @@ function ContextProvider({ children }) {
   const [user, setUser] = useState(null);
   const [query, setQuery] = useState('');
 
+  function handleVideoSnippetClick(video) {
+    console.log('video', video);
+  }
   async function handleSubmit(e) {
     e.preventDefault();
     let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=10&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
@@ -26,6 +29,7 @@ function ContextProvider({ children }) {
   return (
     <context.Provider
       value={{
+        handleVideoSnippetClick,
         setMainVideo,
         mainVideo,
         setVideos,

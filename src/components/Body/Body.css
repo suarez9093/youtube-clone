@@ -1,7 +1,7 @@
 .body {
   background-color: #f9f9f9;
   height: 100%;
-  flex: 0.8;
+  flex: 0.85;
   display: grid;
   grid-template-columns: auto auto auto auto;
   /* grid-template-rows: minmax(200px, 400px); */

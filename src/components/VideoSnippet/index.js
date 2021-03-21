@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { context } from '../../context';
 import './VideoSnippet.css';
-function VideoSnippet({ banner, title, videoId, channel, published }) {
+function VideoSnippet({ title, videoId, channel, published, video }) {
+  const { handleVideoSnippetClick } = useContext(context);
   const videoURL = `https://www.youtube.com/embed/${videoId}?rel=0`;
   return (
     <div className='videoSnippet'>
       {videoId ? (
         <>
           <iframe title={title} src={videoURL} allowFullScreen></iframe>
-          <div className='videoSnippet__text'>
+          <div
+            onClick={() => handleVideoSnippetClick(video)}
+            className='videoSnippet__text'
+          >
             <h4>{title}</h4>
             <p>{channel}</p>
             <p>{published}</p>

@@ -9,4 +9,5 @@
   border: none;
 }
 .videoSnippet__text {
+  cursor: pointer;
 }
