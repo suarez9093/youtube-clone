@@ -1,0 +1,10 @@
+.sidebarOption > div {
+  display: flex;
+  align-items: center;
+}
+.sidebarOption {
+}
+.sidebarOption:hover {
+  background-color: var(--greyColor);
+  cursor: pointer;
+}

@@ -2,4 +2,5 @@
   background-color: #f9f9f9;
   overflow-y: overlay;
   height: 100vh;
+  flex: 0.9;
 }
