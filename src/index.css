@@ -2,6 +2,7 @@
   margin: 0;
   --greyColor: #f8f8f8;
   --iconColor: #606060;
+  box-sizing: border-box;
 }
 
 body {

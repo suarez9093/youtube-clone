@@ -1,6 +1,7 @@
 .sidebarOption > div {
   display: flex;
   align-items: center;
+  margin-left: 16px;
 }
 .sidebarOption__icon {
   color: var(--iconColor);
@@ -11,4 +12,7 @@
 }
 .sidebarOption > div > p {
   font-size: 14px;
+}
+.sidebarOption {
+  padding: 10px 0;
 }
