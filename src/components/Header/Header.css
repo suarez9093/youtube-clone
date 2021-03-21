@@ -11,6 +11,8 @@
 }
 .header {
   justify-content: space-between;
+  padding: 16px 0;
+  background-color: white;
 }
 .header__left {
   align-items: center;

@@ -7,9 +7,11 @@ function VideoSnippet({ banner, title, videoId, channel, published }) {
       {videoId ? (
         <>
           <iframe title={title} src={videoURL} allowFullScreen></iframe>
-          <h4>{title}</h4>
-          <p>{channel}</p>
-          <p>{published}</p>
+          <div className='videoSnippet__text'>
+            <h4>{title}</h4>
+            <p>{channel}</p>
+            <p>{published}</p>
+          </div>
         </>
       ) : null}
     </div>

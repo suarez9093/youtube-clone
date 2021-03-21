@@ -2,10 +2,11 @@
   color: #606060;
 }
 .videoSnippet {
-  max-width: 400px;
-  border: 1px solid red;
 }
 .videoSnippet > iframe {
   width: 100%;
+
   border: none;
+}
+.videoSnippet__text {
 }

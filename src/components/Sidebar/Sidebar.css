@@ -1,8 +1,13 @@
 .sidebar {
   width: 100%;
   flex: 0.2;
+  background-color: white;
 }
 
 .sidebar > hr {
   border-top: 0.1px solid rgba(0, 0, 0, 0.2);
+}
+.sidebar > h4 {
+  margin: 16px 0;
+  margin-left: 16px;
 }

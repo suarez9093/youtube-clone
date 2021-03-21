@@ -33,7 +33,10 @@ function Header({ user }) {
             onChange={handleChange}
             placeholder='Search'
           />
-          <div className='header__center__searchIconContainer'>
+          <div
+            onClick={handleSubmit}
+            className='header__center__searchIconContainer'
+          >
             <SearchIcon fontSize='small' />
           </div>
           <button type='submit'>Submit</button>
