@@ -14,6 +14,8 @@ function Body() {
           key={i}
           videoId={video.id.videoId}
           banner={video.snippet.thumbnails.default.url}
+          channel={video.snippet.channelTitle}
+          published={video.snippet.publishedAt}
         />
       ))}
     </main>
