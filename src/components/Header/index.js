@@ -1,10 +1,16 @@
+import { Avatar } from '@material-ui/core';
+import AppsIcon from '@material-ui/icons/Apps';
 import MenuIcon from '@material-ui/icons/Menu';
 import MicIcon from '@material-ui/icons/Mic';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
-import React from 'react';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import React, { useContext } from 'react';
+import { context } from '../../context';
 import './Header.css';
 import youtubeImage from './img/youtube.png';
-function Header() {
+function Header({ user }) {
+  const { handleSubmit, handleChange, searchTerm } = useContext(context);
   return (
     <header className='header'>
       <div className='header__left'>
@@ -12,19 +18,25 @@ function Header() {
         <img loading='lazy' src={youtubeImage} alt='' />
       </div>
       <div className='header__center'>
-        <form>
-          <input type='search' placeholder='Search' />
+        <form onSubmit={handleSubmit}>
+          <input
+            value={searchTerm}
+            type='search'
+            onChange={handleChange}
+            placeholder='Search'
+          />
           <div className='header__center__searchIconContainer'>
-            <SearchIcon />
+            <SearchIcon fontSize='small' />
           </div>
           <button type='submit'>Submit</button>
         </form>
-
         <MicIcon />
       </div>
       <div className='header__right'>
-        {/* icons */}
-        {/* Avatar */}
+        <VideoCallIcon />
+        <AppsIcon />
+        <NotificationsIcon />
+        <Avatar />
       </div>
     </header>
   );
