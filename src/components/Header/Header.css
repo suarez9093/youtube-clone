@@ -1,0 +1,18 @@
+.header__left > img {
+  width: 90px;
+}
+.header__center {
+}
+.header__center,
+.header__center > form {
+  display: flex;
+}
+.header__center > form > button {
+  display: none;
+}
+.header__center > form > input {
+  border: 1px solid #ccc;
+}
+.header__center__searchIconContainer {
+  background-color: var(--greyColor);
+}
