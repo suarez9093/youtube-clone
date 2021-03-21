@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { context } from '../../context';
 import './VideoSnippet.css';
 function VideoSnippet({ title, videoId, channel, published, video }) {
-  const { handleVideoSnippetClick } = useContext(context);
+  const { handleSelectedVideoClick } = useContext(context);
   const videoURL = `https://www.youtube.com/embed/${videoId}?rel=0`;
   return (
     <div className='videoSnippet'>
@@ -10,7 +10,7 @@ function VideoSnippet({ title, videoId, channel, published, video }) {
         <>
           <iframe title={title} src={videoURL} allowFullScreen></iframe>
           <div
-            onClick={() => handleVideoSnippetClick(video)}
+            onClick={() => handleSelectedVideoClick(video)}
             className='videoSnippet__text'
           >
             <h4>{title}</h4>

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import { context } from '../../context';
 import VideoSnippet from '../VideoSnippet';
 import './Body.css';
@@ -19,9 +18,6 @@ function Body() {
           published={video.snippet.publishedAt}
         />
       ))}
-      <Switch>
-        <Route path='video/:videoId'></Route>
-      </Switch>
     </main>
   );
 }

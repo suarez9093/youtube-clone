@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 const context = React.createContext();
-
 function ContextProvider({ children }) {
+  const history = useHistory();
   const [videos, setVideos] = useState(null);
   const [mainVideo, setMainVideo] = useState(null);
   const [user, setUser] = useState(null);
   const [query, setQuery] = useState('');
 
-  function handleVideoSnippetClick(video) {
+  function handleSelectedVideoClick(video) {
     console.log('video', video);
+    history.push('/video');
   }
   async function handleSubmit(e) {
     e.preventDefault();
@@ -29,7 +31,7 @@ function ContextProvider({ children }) {
   return (
     <context.Provider
       value={{
-        handleVideoSnippetClick,
+        handleSelectedVideoClick,
         setMainVideo,
         mainVideo,
         setVideos,
