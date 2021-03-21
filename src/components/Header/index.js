@@ -10,7 +10,8 @@ import { context } from '../../context';
 import './Header.css';
 import youtubeImage from './img/youtube.png';
 function Header({ user }) {
-  const { handleSubmit, handleChange, searchTerm } = useContext(context);
+  const { handleSubmit, handleChange, query } = useContext(context);
+
   return (
     <header className='header'>
       <div className='header__left'>
@@ -20,7 +21,7 @@ function Header({ user }) {
       <div className='header__center'>
         <form onSubmit={handleSubmit}>
           <input
-            value={searchTerm}
+            value={query}
             type='search'
             onChange={handleChange}
             placeholder='Search'
