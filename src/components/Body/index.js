@@ -7,7 +7,6 @@ function Body() {
   console.log('videos ', videos);
   return (
     <main className='body'>
-      <VideoSnippet banner={videos} />
       {videos?.map((video, i) => (
         <VideoSnippet
           title={video.snippet.title}

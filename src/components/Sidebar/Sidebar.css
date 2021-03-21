@@ -1,4 +1,8 @@
 .sidebar {
   width: 100%;
-  flex: 0.1;
+  flex: 0.2;
+}
+
+.sidebar > hr {
+  border-top: 0.1px solid rgba(0, 0, 0, 0.2);
 }

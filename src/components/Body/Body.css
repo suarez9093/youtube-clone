@@ -2,5 +2,9 @@
   background-color: #f9f9f9;
   overflow-y: overlay;
   height: 100vh;
-  flex: 0.9;
+  flex: 0.8;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 1.5em;
 }

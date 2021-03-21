@@ -21,6 +21,9 @@
 .header__left > img {
   margin-left: 1em;
 }
+.header__left > img:hover {
+  cursor: pointer;
+}
 .header__center {
   width: 100%;
   align-items: center;

@@ -2,9 +2,13 @@
   display: flex;
   align-items: center;
 }
-.sidebarOption {
+.sidebarOption__icon {
+  color: var(--iconColor);
 }
 .sidebarOption:hover {
   background-color: var(--greyColor);
   cursor: pointer;
+}
+.sidebarOption > div > p {
+  font-size: 14px;
 }

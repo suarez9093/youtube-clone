@@ -6,17 +6,24 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import { context } from '../../context';
 import './Header.css';
 import youtubeImage from './img/youtube.png';
 function Header({ user }) {
+  const history = useHistory();
   const { handleSubmit, handleChange, query } = useContext(context);
 
   return (
     <header className='header'>
       <div className='header__left'>
         <MenuIcon />
-        <img loading='lazy' src={youtubeImage} alt='' />
+        <img
+          onClick={() => history.push('/')}
+          loading='lazy'
+          src={youtubeImage}
+          alt=''
+        />
       </div>
       <div className='header__center'>
         <form onSubmit={handleSubmit}>
