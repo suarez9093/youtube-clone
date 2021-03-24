@@ -7,9 +7,10 @@ function ContextProvider({ children }) {
   const [mainVideo, setMainVideo] = useState(null);
   const [user, setUser] = useState(null);
   const [query, setQuery] = useState();
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   function handleSelectedVideoClick(video) {
-    console.log('video', video);
+    setSelectedVideo(video);
     history.push('/video');
   }
   async function handleSubmit(e) {
@@ -46,6 +47,8 @@ function ContextProvider({ children }) {
   return (
     <context.Provider
       value={{
+        selectedVideo,
+        setSelectedVideo,
         handleSelectedVideoClick,
         setMainVideo,
         mainVideo,
