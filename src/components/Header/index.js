@@ -5,15 +5,18 @@ import MicIcon from '@material-ui/icons/Mic';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { context } from '../../context';
 import './Header.css';
 import youtubeImage from './img/youtube.png';
 function Header({ user }) {
   const history = useHistory();
-  const { handleSubmit, handleChange, query } = useContext(context);
+  const { handleSubmit, handleChange, query, setQuery } = useContext(context);
 
+  useEffect(() => {
+    handleSubmit();
+  }, []);
   return (
     <header className='header'>
       <div className='header__left'>
