@@ -1,8 +1,5 @@
 .selectedVideo {
-  border: 1px solid red;
-  flex: 0.7;
+  /* flex: 0.7; */
   height: 100vh;
-}
-.selectedVideo > iframe {
-  border: 30px solid green;
+  display: flex;
 }

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { context } from '../../context';
+import SidebarVideo from '../SidebarVideo';
 import './SelectedVideo.css';
 function SelectedVideo() {
   const { selectedVideo } = useContext(context);
@@ -20,6 +21,9 @@ function SelectedVideo() {
           <p>{publishedAt}</p>
         </div>
       </div>
+      {/* <div className='selectedVideo__sidebarContainer'> */}
+      <SidebarVideo />
+      {/* </div> */}
     </div>
   );
 }
