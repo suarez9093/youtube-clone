@@ -64,3 +64,9 @@
   width: 100%;
   border-right: none;
 }
+.header__right > .MuiSvgIcon-root {
+  cursor: pointer;
+}
+.header__center > .MuiSvgIcon-root {
+  cursor: pointer;
+}

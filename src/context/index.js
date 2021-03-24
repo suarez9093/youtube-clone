@@ -16,7 +16,7 @@ function ContextProvider({ children }) {
     try {
       if (e) {
         e.preventDefault();
-        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=8&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
+        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=10&q=${query}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`;
 
         let urlResponse = await fetch(url);
         let data = await urlResponse.json();
@@ -24,7 +24,7 @@ function ContextProvider({ children }) {
         setVideos(data.items);
         setQuery('');
       } else {
-        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=8&q=${'popular videos'}&key=${
+        let url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&maxResults=10&q=${'popular videos'}&key=${
           process.env.REACT_APP_YOUTUBE_API_KEY
         }`;
 
