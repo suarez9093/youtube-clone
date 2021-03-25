@@ -1,0 +1,15 @@
+.selectedVideo {
+  /* flex: 0.7; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin: 30px;
+}
+.selectedVideo__videoContainer {
+  flex: 0.7;
+  margin-right: 30px;
+}
+.selectedVideo__videoContainer > iframe {
+  width: 100%;
+  height: 80%;
+}

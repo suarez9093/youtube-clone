@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { context } from '../../context';
 import VideoSnippet from '../VideoSnippet';
-import './Body.css';
-function Body() {
+import './SidebarVideo.css';
+
+function SidebarVideo() {
   const { videos } = useContext(context);
-  console.log('videos ', videos);
   return (
-    <main className='body'>
+    <div className='sidebarVideo'>
       {videos?.map((video, i) => (
         <VideoSnippet
           video={video}
@@ -18,8 +18,8 @@ function Body() {
           published={video.snippet.publishedAt}
         />
       ))}
-    </main>
+    </div>
   );
 }
 
-export default Body;
+export default SidebarVideo;

@@ -1,0 +1,13 @@
+.videoSnippet > p {
+  color: #606060;
+}
+.videoSnippet {
+}
+.videoSnippet > iframe {
+  width: 100%;
+
+  border: none;
+}
+.videoSnippet__text {
+  cursor: pointer;
+}

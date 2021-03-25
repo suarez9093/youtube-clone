@@ -11,15 +11,21 @@
 }
 .header {
   justify-content: space-between;
+  padding: 16px 0;
+  background-color: white;
 }
 .header__left {
   align-items: center;
   width: 275px;
+  margin-left: 16px;
 
   flex: 0.3;
 }
 .header__left > img {
   margin-left: 1em;
+}
+.header__left > img:hover {
+  cursor: pointer;
 }
 .header__center {
   width: 100%;
@@ -57,4 +63,10 @@
   padding-left: 1em;
   width: 100%;
   border-right: none;
+}
+.header__right > .MuiSvgIcon-root {
+  cursor: pointer;
+}
+.header__center > .MuiSvgIcon-root {
+  cursor: pointer;
 }
