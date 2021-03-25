@@ -1,3 +1,6 @@
 .sidebarVideo {
   flex: 0.3;
 }
+.selectedVideo > .videoSnippet {
+  flex-direction: row;
+}
